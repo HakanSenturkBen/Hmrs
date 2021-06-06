@@ -11,7 +11,7 @@ public class DataResult<T> extends Result{
 		this.data=data;
 	}
 	
-	public T getDate() {
+	public T getData() {
 		return this.data;
 	}
 }

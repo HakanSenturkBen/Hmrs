@@ -11,5 +11,6 @@ import HmrsProje.Hmrs.entity.dtos.EmployerDto;
 public interface EmployerService {
 	DataResult<List<Employer>>getAll();
 	Result add(EmployerDto employer);
+	DataResult<Employer>getBycompanyName(String name);
 
 }

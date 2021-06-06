@@ -8,8 +8,6 @@ import org.springframework.stereotype.Service;
 import HmrsProje.Hmrs.busines.abstracts.AddressService;
 import HmrsProje.Hmrs.busines.abstracts.EmployerService;
 import HmrsProje.Hmrs.busines.abstracts.MembershipService;
-import HmrsProje.Hmrs.busines.abstracts.PhoneService;
-import HmrsProje.Hmrs.busines.abstracts.ProfessionService;
 import HmrsProje.Hmrs.busines.abstracts.UserService;
 import HmrsProje.Hmrs.core.utilities.business.BusinessRules;
 import HmrsProje.Hmrs.core.utilities.results.DataResult;
@@ -21,8 +19,6 @@ import HmrsProje.Hmrs.dataAccess.abstracts.EmployerDao;
 import HmrsProje.Hmrs.entity.concretes.Address;
 import HmrsProje.Hmrs.entity.concretes.Employer;
 import HmrsProje.Hmrs.entity.concretes.Membership;
-import HmrsProje.Hmrs.entity.concretes.Phone;
-import HmrsProje.Hmrs.entity.concretes.Profession;
 import HmrsProje.Hmrs.entity.concretes.User;
 import HmrsProje.Hmrs.entity.dtos.EmployerDto;
 
@@ -105,6 +101,11 @@ public class EmployerManager implements EmployerService {
 	Result addAddressId (Address address) {
 		 addressService.add(address);
 		 return new SuccessResult(address.getId()+"");
+	}
+
+	@Override
+	public DataResult<Employer> getBycompanyName(String name) {
+		return new SuccessDataResult<Employer>(employerDao.getBycompanyName(name));
 	}
 
 }

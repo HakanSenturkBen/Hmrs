@@ -9,4 +9,5 @@ import HmrsProje.Hmrs.entity.concretes.Generaljobtitle;
 public interface GeneraljoptitleService {
 	DataResult<List<Generaljobtitle>>getAll();
 	Result add(Generaljobtitle joptitle);
+	DataResult<Generaljobtitle>getByjopTitleName(String jopTitleName);
 }

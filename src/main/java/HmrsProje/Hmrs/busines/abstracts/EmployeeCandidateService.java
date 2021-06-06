@@ -11,5 +11,6 @@ import HmrsProje.Hmrs.entity.dtos.EmployeeCandidateDto;
 public interface EmployeeCandidateService  {
 	DataResult<List<EmployeeCandidate>>getAll();
 	Result add(EmployeeCandidateDto employeeCandidate);
+	DataResult<EmployeeCandidate>getById(int id);
 
 }

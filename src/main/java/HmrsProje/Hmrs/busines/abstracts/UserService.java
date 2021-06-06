@@ -10,5 +10,6 @@ import HmrsProje.Hmrs.entity.concretes.User;
 public interface UserService {
 	DataResult<List<User>>getAll();
 	Result add(User user);
+	DataResult<User>getByPersonId(int personId);
 
 }

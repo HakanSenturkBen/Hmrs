@@ -137,6 +137,11 @@ public class EmployeeCandidateManager implements EmployeeCandidateService{
 		 addressService.add(address);
 		 return new SuccessResult(address.getId()+"");
 	}
+
+	@Override
+	public DataResult<EmployeeCandidate> getById(int id) {
+		return new SuccessDataResult<EmployeeCandidate>(employeeCandidateDao.getByid(id));
+	}
 	
 	
 	

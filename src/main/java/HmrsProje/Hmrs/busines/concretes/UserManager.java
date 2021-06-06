@@ -33,6 +33,12 @@ public class UserManager implements UserService{
 		userDao.save(user);
 		return new SuccessResult("eklendi");
 	}
+
+	@Override
+	public DataResult<User> getByPersonId(int personId) {
+		return new SuccessDataResult<User>(userDao.getByid(personId));
+		
+	}
 	
 
 }
